@@ -1,0 +1,24 @@
+#photo {
+	display: flex;
+	/* 使用 Flexbox 布局 */
+	justify-content: flex-end;
+	/* 水平对齐：将内容对齐到右边 */
+	align-items: center;
+	/* 垂直对齐：将内容居中 */
+	gap: 20px;
+	/* 设置图片之间的水平间距 */
+	padding-right: 60px;
+	/* 可选：为容器右边添加内边距 */
+}
+
+#photo img {
+	margin-top: 70px;
+	/* 可以设置图片的上边距 */
+}
+
+#photo2 img {
+	width: 100px;
+	/* 设置第二张图片的宽度 */
+	height: auto;
+	/* 高度自动调整 */
+}

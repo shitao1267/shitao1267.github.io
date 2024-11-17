@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="小明">
+    <meta name="description" content="个人简介网页">
+    <title>个人简介</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #4682b4;
+        }
+
+        .container {
+            position: relative; /* 使返回链接相对于容器定位 */
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #777;
+        }
+
+        /* 返回首页链接样式 */
+        h4 {
+            position: absolute; /* 定位到容器内 */
+            bottom: 10px; /* 距离底部10px */
+            right: 10px; /* 距离右边10px */
+            background-color: #4682b4;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        h4 a {
+            color: white;
+            text-decoration: none;
+        }
+
+        h4:hover {
+            background-color: #5a9bd1; /* 悬停时改变背景颜色 */
+        }
+
+        h4:hover a {
+            color: white;
+        }
+
+        /* 按钮样式 */
+        .resume-btn {
+            display: inline-flex;
+            align-items: center;
+            background-color: #4682b4;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .resume-btn img {
+            margin-right: 10px; /* 图片与文本之间的间距 */
+            width: 20px; /* 设置图片的宽度 */
+            height: 20px; /* 设置图片的高度 */
+        }
+
+        .resume-btn:hover {
+            background-color: #5a9bd1; /* 悬停时改变背景颜色 */
+        }
+
+        .resume-btn:hover img {
+            filter: brightness(1.2); /* 悬停时让图片变亮 */
+        }
+
+        /* 让图片定位在右下角 */
+        #photo {
+            position: fixed; /* 固定定位 */
+            bottom: 20px; /* 离底部20px */
+            right: 20px; /* 离右边20px */
+            z-index: 10; /* 确保图片在所有内容上方 */
+        }
+
+        #photo img {
+            width: 100px; /* 设置图片的宽度 */
+            height: 100px; /* 设置图片的高度 */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>欢迎来到我的个人简介网页</h1>
+</header>
+
+<div class="container">
+    <h2>关于我</h2>
+    <p>你好！我叫小明，是计算机科学与技术专业的毕业生,具备扎实的编程基础和项目经验。熟悉各种编程语言,对技术领域以及当前热门技术有深入了解。致力于应用技术解决实际问题,具有良好的团队合作和问题解决能力。</p>
+    
+    <h2>教育背景</h2>
+    <p>我在清华大学学习人工智能数据服务、 计算机视觉应用开发、深度学习应 用开发、自然语言处理应用开发、智 能语音处理及应用开发、人工智能 系统部署与运维、人工智能综合项 目开发。</p>
+    
+    <h2>专业技能</h2>
+    <ul>
+        <li>1.熟悉各种办公软件如office Word, Excel, PowerPoint, WPS等。</li>
+        <li>2.熟悉c语言,面向对象,Python,微信小程序,能够开发相关应用程序。</li>
+        <li>3.熟悉MySQL数据库的使用,了解Linux操作系统的服务器操作。</li>
+    </ul>
+    
+    <h2>获得的证书</h2>
+    <p>计算机二级证书  普通话证书  机动车驾驶证</p>
+    
+    <h2>自我评价</h2>
+    <p>善于分析和解决复杂问题,具有创新思维和良好的解决问题能力。在多个项目中提出并实施了有效的解决方案,显著提升了系统性能或工作效率。喜欢挑战自我,勇于尝试新方法和技术,不断推动个人和团队的进步。</p>
+
+    <h2>简历</h2>
+    <a href="简历.pdf" target="_blank" class="resume-btn">
+        <img src="img/xiazai.png" alt="下载图片">下载简历
+    </a>
+
+    <!-- 返回首页链接 -->
+    <h4><a href="index.html#software">返回主页</a></h4>
+</div>
+
+<footer>
+    <p>&copy; 2024小明. 版权所有.</p>
+</footer>
+
+<!-- 图片位于右下角 -->
+<div id="photo">
+    <img src="img/04.gif" alt="图片">
+</div>
+
+</body>
+</html>

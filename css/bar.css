@@ -1,0 +1,42 @@
+/* 容器设置 */
+			
+			body {
+				margin: 0;
+				padding: 0;
+				background-color:  #282c34;
+				/* 深色背景 */
+				color: white;
+				font-family: "楷体";
+				text-align: center;
+			}
+			/* 导航栏样式 */
+			
+			nav {
+				display: flex;
+				justify-content: space-around;
+				background-color: #333;
+				padding: 15px 0;
+			}
+			
+			nav a {
+				color: white;
+				text-decoration: none;
+				margin: 0 15px;
+				font-size: 18px;
+			}
+			
+			nav a:hover {
+				transform: scale(2); /* 放大效果 */
+				color: aquamarine;
+			}
+			/* 个人简介样式 */
+			
+			.intro {
+				font-size: 20px;
+				color:#FFFFFF;
+				margin-top: 20px;
+			}
+			.intro:hover {
+				color: #FF0000;
+				/* 悬停时改变文本颜色 */
+			}

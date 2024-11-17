@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>个人主页</title>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/bar.css">
+		<link rel="stylesheet" href="css/photo.css">
+		<link rel="stylesheet" href="css/lun.css">
+	</head>
+	<body>
+		<!-- 导航栏 -->
+		<h3><a name="software"></a></h3>
+		<nav>
+			<a href="01.html">个人简介</a>
+			<a href="02.html">个人兴趣</a>
+			<a href="03.html">个人相册</a>
+			<a href="04.html">联系方式</a>
+		</nav>
+		<!-- 个人简介区域 -->
+		<marquee>
+		<div id="intro" class="intro">
+			欢迎来到我的个人主页！
+		</div></marquee>
+		<!-- 轮播图容器 -->
+		<div class="carousel">
+			<!-- 图片区域 -->
+			<div class="carousel-images">
+				<a href="01.html"><img src="img/34.png" alt="Image 34"></a>
+				<a href="01.html"><img src="img/35.png" alt="Image 35"></a>
+				<a href="01.html"><img src="img/36.png" alt="Image 36"></a>
+				<a href="02.html"><img src="img/37.png" alt="Image 37"></a>
+				<a href="02.html"><img src="img/38.png" alt="Image 38"></a>
+				<a href="02.html"><img src="img/39.png" alt="Image 39"></a>
+				<a href="04.html"><img src="img/40.png" alt="Image 40"></a>
+				<a href="04.html"><img src="img/41.png" alt="Image 41"></a>
+				<a href="04.html"><img src="img/42.png" alt="Image 42"></a>
+			</div>
+			<!-- 左右箭头 -->
+			<button class="prev">&#10094;</button>
+			<button class="next">&#10095;</button>
+			<!-- 小圆点导航 -->
+			<div class="dot-container">
+				<span class="dot active-dot"></span>
+				<span class="dot"></span>
+				<span class="dot"></span>
+			</div>
+		</div>
+		<!--音乐-->
+		<div class="audio-wrapper">
+			<audio id="audio" controls>
+				<source src="music/baby.mp3" type="audio/mp3"> 你的浏览器不支持 audio 元素。
+			</audio>
+			<div id="lyric">
+				<div id="lyrics-container">
+					*****
+					<!-- 歌词内容将在这里动态显示 -->
+				</div>
+			</div>
+		</div>
+		<!--动态歌词-->
+<script src="js/script.js"></script>
+<div id="photo">
+    <img src="img/05.gif" alt="Image5">
+    <div id="photo2">
+        <img src="img/06.gif" alt="Image6">
+    </div>
+</div>
+</div>
+<!--轮播图-->
+<script src="js/lun.js"></script>
+	</body>
+
+</html>

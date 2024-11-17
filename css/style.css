@@ -1,0 +1,106 @@
+/* 美化播放器样式 */
+.audio-wrapper {
+	position: fixed;
+	/* 固定位置 */
+	bottom: 20px;
+	/* 离页面底部 20px */
+	left: 20px;
+	/* 离页面左侧 20px */
+	width: 300px;
+	/* 音频播放器宽度 */
+	z-index: 10;
+	/* 确保播放器在最前面 */
+	background-color: #fff;
+	/* 白色背景 */
+	border-radius: 10px;
+	/* 圆角 */
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	/* 添加阴影效果 */
+	padding: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: transform 0.3s ease-in-out;
+	/* 平滑的动画效果 */
+}
+
+.audio-wrapper:hover {
+	transform: translateY(-5px);
+	/* 鼠标悬停时上移 */
+}
+
+
+/* 音频播放器宽度适配 */
+
+.audio {
+	width: 100%;
+	border-radius: 8px;
+	border: 2px solid #ccc;
+	padding: 5px;
+	background-color: #f9f9f9;
+	transition: border-color 0.3s ease;
+}
+
+.audio:hover {
+	border-color: #ff6347;
+	/* 鼠标悬停时改变边框颜色 */
+}
+
+
+/* 美化歌词容器 */
+
+#lyrics-container {
+	font-size: 2rem;
+	line-height: 1.8;
+	color: #32CD32;
+	/* 默认歌词颜色为绿色 */
+	font-weight: bold;
+	transition: opacity 0.5s ease, transform 0.5s ease, color 0.3s ease, text-shadow 0.3s ease;
+	/* 添加 color 和 text-shadow 过渡 */
+	position: absolute;
+	bottom: 15px;
+	/* 距离播放器底部 5px */
+	left: 100%;
+	/* 将歌词定位到播放器右侧 */
+	transform: translateX(50px);
+	/* 添加一些右侧间距 */
+	white-space: nowrap;
+	/* 防止歌词换行 */
+	text-shadow: 0 0 10px rgba(50, 205, 50, 1), 0 0 20px rgba(50, 205, 50, 0.7), 0 0 30px rgba(50, 205, 50, 0.5);
+	/* 绿色发光效果 */
+}
+
+
+/* 鼠标悬停时歌词颜色和发光效果变化 */
+
+#lyrics-container:hover {
+	transform: translateX(60px);
+	/* 鼠标悬停时增加歌词容器的右移效果 */
+	opacity: 0.9;
+	/* 稍微增加歌词容器的透明度 */
+	color: red;
+	/* 鼠标悬停时改变歌词颜色为红色 */
+	text-shadow: 0 0 10px rgba(255, 99, 71, 1), 0 0 20px rgba(255, 99, 71, 0.7), 0 0 30px rgba(255, 99, 71, 0.5);
+	/* 红色发光效果 */
+}
+
+
+/* 提高页面的整体对比度 */
+
+.audio-wrapper {
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+	background-color: #fff;
+}
+
+
+/* 调整底部播放器的位置，使其更美观 */
+
+.audio-wrapper {
+	border-radius: 15px;
+	/* 圆角效果 */
+	padding: 20px;
+	background: rgba(255, 255, 255, 0.9);
+	/* 背景透明感 */
+	backdrop-filter: blur(10px);
+	/* 背景模糊 */
+}

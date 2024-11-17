@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人相册</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .album-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px;
+        }
+        .album-item {
+            margin: 10px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 300px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .album-item img {
+            width: 100%;
+            height: 200px; /* 固定图片的高度 */
+            object-fit: cover; /* 保持图片比例，避免变形 */
+            cursor: pointer;
+        }
+        .album-item video {
+            width: 100%;
+            height: 200px; /* 固定视频高度 */
+            object-fit: cover; /* 保持视频比例 */
+        }
+        .album-item p {
+            padding: 10px;
+            text-align: center;
+            background-color: #f9f9f9;
+            margin: 0;
+        }
+        .album-item:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+        h4 {
+            position: absolute;
+            top: 70px;
+            right: 10px;
+            background-color: #00BFFF;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 14px;
+            text-decoration: none;
+        }
+        h4 a {
+            color: white;
+            text-decoration: none;
+        }
+        h4:hover {
+            background-color: lightskyblue;
+        }
+        h4:hover a {
+            color: white;
+        }
+         /* 模态框样式 */
+        .modal {
+            display: none; /* 默认隐藏 */
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        .modal-content, #caption {
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @keyframes zoom {
+            from {transform:scale(0)}
+            to {transform:scale(1)}
+        }
+
+        /* 关闭按钮 */
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>个人相册</h1>
+        <p>欢迎浏览我的照片集，记录我的美好时光</p>
+    </header>
+
+    <div class="album-container">
+        <div class="album-item">
+            <img src="img/10.jpg" alt="照片1" onclick="openModal(this)">
+            <p>旅行中的日出</p>
+        </div>
+        <div class="album-item">
+            <img src="img/11.jpg" alt="照片2" onclick="openModal(this)">
+            <p>璀璨入云的东方</p>
+        </div>
+        <div class="album-item">
+            <img src="img/12.jpg" alt="照片3" onclick="openModal(this)">
+            <p>平静的湖面</p>
+        </div>
+        <div class="album-item">
+            <img src="img/13.jpg" alt="照片4" onclick="openModal(this)">
+            <p>美丽的自然风光</p>
+        </div>
+        <div class="album-item">
+            <img src="img/14.jpg" alt="照片5" onclick="openModal(this)">
+            <p>宠物的可爱瞬间</p>
+        </div>
+
+        <!-- 红旗-->
+        <div class="album-item">
+            <video controls>
+                <source src="vido/d5e4fbbdba2cb767ff4f34f0f95ddb66.mp4" type="video/mp4">
+                您的浏览器不支持视频播放。
+            </video>
+            <p>红旗</p>
+        </div>
+
+        <div class="album-item">
+            <img src="img/15.jpg" alt="照片6" onclick="openModal(this)">
+            <p>大雁塔</p>
+        </div>
+
+        <h4><a href="index.html#software">返回主页</a></h4>
+    </div>
+
+    <!-- 模态框 -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        // 打开模态框，显示点击的图片
+        function openModal(img) {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("img01");
+            var captionText = document.getElementById("caption");
+            modal.style.display = "block";
+            modalImg.src = img.src;
+            captionText.innerHTML = img.alt;
+        }
+
+        // 关闭模态框
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+
+        // 点击模态框外面也可以关闭模态框
+        window.onclick = function(event) {
+            var modal = document.getElementById("myModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
